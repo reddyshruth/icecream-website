@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scoopice – Handmade, natural ice creams with exciting flavours like chocolate, mango, and more!" />
+  <title>Scoopice - A New Adventure in Ice Cream</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      background-color: #fff8f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .center {
+      text-align: center;
+    }
+    .nav a {
+      padding: 0 20px;
+      text-decoration: none;
+      color: #333;
+    }
+    .nav a:hover {
+      color: #d6336c;
+    }
+    h1 {
+      font-size: 50px;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .button {
+      font-size: 20px;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #c0392b;
+    }
+    .flavours, .more-flavours {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .flavour-item {
+      width: 150px;
+      text-align: center;
+    }
+    .flavour-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #ff6f91;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d94d6a;
+    }
+    #successMsg {
+      color: green;
+      display: none;
+      margin-top: 20px;
+    }
+    footer {
+      background-color: #fce4ec;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="center">
+    <img src="Image1.png" alt="Scoopice Logo" style="max-width: 200px; height: auto; margin-top: 40px;" />
+  </div>
+
+  <div class="center nav" style="margin-top: 20px;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+  </div>
+
+  <h1 class="center">A New Adventure in Ice Cream</h1>
+
+  <p class="center">
+    We believe that simple, natural food tastes best.<br />
+    Our ice cream is lovingly handmade in small batches<br />
+    using only simple, natural, and fresh local ingredients.
+  </p>
+
+  <div class="center">
+    <a class="button" href="https://www.google.com/">Read more</a>
+  </div>
+
+  <hr style="width: 60%; margin: 30px auto; border: 1px solid #ccc;" />
+
+  <div class="center">
+    <h2>Our Core Flavours</h2>
+  </div>
+
+  <div class="flavours">
+    <div class="flavour-item">
+      <img src="Ice_Cream-1.jpg" alt="Chocolate Ice Cream" />
+      <p><strong>Chocolate</strong></p>
+    </div>
+    <div class="flavour-item">
+      <img src="Ice-Creams-2.jpg" alt="Blueberry Ice Cream" />
+      <p><strong>Blueberry</strong></p>
+    </div>
+    <div class="flavour-item">
+      <img src="Ice-Cream-3.jpg" alt="Mixed Fruit Ice Cream" />
+      <p><strong>Mixed Fruit</strong></p>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <video controls style="width: 300px; max-width: 90%; border-radius: 10px;">
+      <source src="video/ice-cream-preparation.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="center" style="margin: 50px 0;">
+    <h2 style="color: #d6336c;">🍨 Tell Us What You Think!</h2>
+    <form id="feedbackForm" onsubmit="showSuccessMessage(event)">
+      <label for="nameInput">Name:</label>
+      <input type="text" id="nameInput" required />
+
+      <label for="emailInput">Email:</label>
+      <input type="email" id="emailInput" required />
+
+      <label for="flavorInput">Your Favorite Flavor:</label>
+      <select id="flavorInput" required>
+        <option value="">-- Please choose one --</option>
+        <option value="Vanilla">Vanilla</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Mango">Mango</option>
+        <option value="Cookies & Cream">Cookies & Cream</option>
+      </select>
+
+      <label for="feedbackInput">Feedback:</label>
+      <textarea id="feedbackInput" rows="4" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <p id="successMsg"></p>
+  </div>
+
+  <hr style="width: 60%; margin: 30px auto; border: 1px solid #ccc;" />
+
+  <div class="center">
+    <h2 style="color: #d6336c;">🍦 More Flavours to Try!</h2>
+  </div>
+
+  <div class="more-flavours">
+    <div class="flavour-item">
+      <img src="vanilla.jpg" alt="Vanilla Ice Cream" />
+      <p><strong>Vanilla</strong></p>
+    </div>
+    <div class="flavour-item">
+      <img src="Strawberry.jpg" alt="Strawberry Ice Cream" />
+      <p><strong>Strawberry</strong></p>
+    </div>
+    <div class="flavour-item">
+      <img src="mango-kulfi-dessert-ice-cream.jpg" alt="Mango Ice Cream" />
+      <p><strong>Mango</strong></p>
+    </div>
+    <div class="flavour-item">
+      <img src="cookies ice cream.jpg" alt="Cookies & Cream Ice Cream" />
+      <p><strong>Cookies & Cream</strong></p>
+    </div>
+  </div>
+
+ <footer>
+  <p>&copy; 2025 Scoopice. All rights reserved.</p>
+  <div style="margin-top: 10px;">
+    <a href="https://www.instagram.com/shruthi_redieee/" target="_blank" style="margin: 0 10px;">
+      <img src="instagram-icon.png" alt="Instagram" width="30" />
+    </a>
+    <a href="https://www.linkedin.com/in/shruthi-reddy-2712172a4/" target="_blank" style="margin: 0 10px;">
+      <img src="linkedln-icon.png" alt="LinkedIn" width="30" />
+    </a>
+    <a href="https://github.com/reddyshruth" target="_blank" style="margin: 0 10px;">
+      <img src="github-icon.png" alt="GitHub" width="30" />
+    </a>
+    <a href="https://www.youtube.com/@GurralaShruthi" target="_blank" style="margin: 0 10px;">
+      <img src="Youtube-icon.png" alt="YouTube" width="30" />
+    </a>
+  </div>
+</footer>
+
+  <script>
+    function showSuccessMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('nameInput').value;
+      const flavor = document.getElementById('flavorInput').value;
+      const msg = document.getElementById('successMsg');
+      msg.textContent = `🍦 Thanks, ${name}! Glad to know you love ${flavor}. We appreciate your feedback!`;
+      msg.style.display = 'block';
+      document.getElementById('feedbackForm').reset();
+    }
+  </script>
+</body>
+</html>
